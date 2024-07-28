@@ -1,7 +1,7 @@
 <!-- Header -->
 <div class="bg-primary header">
     <h3 class="text-light layer">
-        <span>Shoppe</span>
+        
         <span>Quản lý sản phẩm User</span>
     </h3>
 
@@ -11,7 +11,7 @@
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
             <li><a class="dropdown-item" href="#">My profile</a></li>
             <li><a class="dropdown-item" href="#">Language</a></li>
-            <li><a class="dropdown-item" href="#">Logout</a></li>
+            <li><a class="dropdown-item" href="{{ route('logout') }}">Logout</a></li>
         </ul>
     </div>
 </div>

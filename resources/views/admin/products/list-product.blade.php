@@ -12,6 +12,9 @@
 @section('content')
 <!-- Main -->
 <div class="p-4" style="min-height: 800px;">
+    @if(session('message'))
+        <p class="text-danger">{{ session('message') }}</p>
+    @endif
     <h4 class="text-primary mb-4">Danh sách sản phẩm</h4>
     <button class="btn btn-info">Thêm mới</button>
     <table class="table mt-3">
