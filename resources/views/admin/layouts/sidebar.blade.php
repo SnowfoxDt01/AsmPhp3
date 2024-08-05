@@ -5,11 +5,11 @@
         <a href="#" class="list-group-item ">
             Quản lý người dùng
         </a>
-        <a href="#" class="list-group-item">
+        <a href="{{ route('admin.products.listProductAdmin') }}" class="list-group-item">
             Quản lý sản phẩm
         </a>
-        <a href="#" class="list-group-item ">
-            Báo cáo
+        <a href="{{ route('admin.categories.listCategoryAdmin') }}" class="list-group-item ">
+            Quản lý danh mục
         </a>
         <a href="#" class="list-group-item ">
             Thống kê

@@ -18,10 +18,10 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <!-- Sidebar -->
-            @include('user.layouts.sidebar')
+            {{-- <!-- Sidebar -->
+            @include('user.layouts.sidebar') --}}
 
-            <div class="col-9 offset-3 p-0 position-relative">
+            <div>
                 <!-- Header -->
                 @include('user.layouts.header')
 

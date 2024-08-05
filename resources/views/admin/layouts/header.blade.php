@@ -2,7 +2,7 @@
 <div class="bg-primary header">
     <h3 class="text-light layer">
         
-        <span>Quản lý sản phẩm Admin</span>
+        <span>Quản lý Admin</span>
     </h3>
 
     <div class="dropdown">

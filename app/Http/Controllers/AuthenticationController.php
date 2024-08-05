@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use App\Http\Requests\UserLoginRequest;
 
 class AuthenticationController extends Controller
 {
@@ -13,7 +14,8 @@ class AuthenticationController extends Controller
         return view('login');
     }
 
-    public function postLogin(Request $req){
+    public function postLogin(UserLoginRequest $req){
+        
         $dataUserLogin = [
             'email' => $req->email,
             'password' => $req->password

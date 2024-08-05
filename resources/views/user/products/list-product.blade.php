@@ -6,86 +6,35 @@
 @endsection
 
 @push('styles')
-
+    <style>
+        .card-img-top{
+            width: 367px;
+            height: 367px;
+            object-fit: cover;
+        }
+    </style>
 @endpush
 
 @section('content')
 <!-- Main -->
 <div class="p-4" style="min-height: 800px;">
-    @if(session('message'))
-        <p class="text-danger">{{ session('message') }}</p>
-    @endif
-    <h4 class="text-primary mb-4">Danh sách sản phẩm</h4>
-    <button class="btn btn-info">Thêm mới</button>
-    <table class="table mt-3">
-        <thead>
-            <tr>
-                <th scope="col">STT</th>
-                <th scope="col">Tên sản phẩm</th>
-                <th scope="col">Giá sản phẩm</th>
-                <th scope="col">Mô tả</th>
-                <th scope="col">Hành động</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Nokia 520</td>
-                <td>15000000 vnđ</td>
-                <td>
-                    Điện thoại mới giá ổn
-                </td>
-                <td>
-                    <button class="btn btn-warning">Sửa</button>
-                    <button class="btn btn-danger">Xóa</button>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">1</th>
-                <td>Nokia 520</td>
-                <td>15000000 vnđ</td>
-                <td>
-                    Điện thoại mới giá ổn
-                </td>
-                <td>
-                    <button class="btn btn-warning">Sửa</button>
-                    <button class="btn btn-danger">Xóa</button>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">1</th>
-                <td>Nokia 520</td>
-                <td>15000000 vnđ</td>
-                <td>
-                    Điện thoại mới giá ổn
-                </td>
-                <td>
-                    <button class="btn btn-warning">Sửa</button>
-                    <button class="btn btn-danger">Xóa</button>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">1</th>
-                <td>Nokia 520</td>
-                <td>15000000 vnđ</td>
-                <td>
-                    Điện thoại mới giá ổn
-                </td>
-                <td>
-                    <button class="btn btn-warning">Sửa</button>
-                    <button class="btn btn-danger">Xóa</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="row">
+        @foreach($listProduct as $product)
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <img src="{{ asset($product->image) }}" class="card-img-top" alt="{{ $product->name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $product->name }}</h5>
+                        <p class="card-text">{{ $product->description }}</p>
+                        <p class="card-text"><strong>Giá: </strong>{{ number_format($product->price) }} VND</p>
+                    </div>
+                </div>
+            </div>
+        @endforeach
+    </div>
 </div>
-
-
-
 @endsection
 
-
-
 @push('scripts')
-
+<!-- Custom scripts for this view -->
 @endpush
